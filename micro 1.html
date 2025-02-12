@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio website!! </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bb280fde63.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-text">
+        <h1> Hi, I'm <span>Parv</span> <br> from MITS Gwalior </h1>
+        </div>
+    </div>
+
+    <!---------------about--------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="idcard.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link"  onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span><u>editing/designing</u></span><br>editing photos and videos<br>designing app/web interface</li>
+                            <br><br>
+                            <li><span><u>web development</u></span><br>html/css/javascript<br></li>
+                            <br><br>
+                            <li><span><u>other coding languages</u></span><br>python,c++</li>
+                        </ul>
+                    </div>
+                     
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span><u>NONE</u></span></li>
+                            <br>
+                        </ul>
+                    </div>
+                     
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2024-28 current<u></u></span><br>B.tech in branch(AI & Data Science)<br>from MITS Gwalior</li>
+                            <br>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!---------------------------skills------------------->
+
+<div id="skills">
+    <div class="container">
+        <h1 class="sub-title">Skills</h1><br>
+        <div class="skillslist">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Devlopment</h2><br>
+                <p><h4>html/css/javascript</h4></p>
+                <h3><a href="#">More--></a></h3>
+            </div>
+            <div>
+                <i class="fa-sharp fa-solid fa-crop-simple"></i>
+                <h2>edditing &<br>designing</h2><br>
+                <p><h4>editing photos and videos<br>designing app/web interface</h4></p>
+                <h3><a href="#">More--></a></h3>
+            </div>
+            <div>
+                <i class="fa-solid fa-terminal"></i>
+                <h2>other coding languages</h2><br>
+                <p><h4>python/c++</h4></p>
+                <h3><a href="#">More--></a></h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------------contact-----------------> 
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> parvsharma765@gmail.com</p>
+                <p><i class="fa-sharp fa-solid fa-phone-volume"></i> 8319185850</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/parv_sharma_______/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/parv-sharma-176ba9314/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/parvsharma765"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <a href=" images/lab practical minor 2.pdf " download class=" btn ">Download CV</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright © 2024 Parv</p>
+        </div>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname)
+    {
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+    
+</script>       
+
+</body>
+</html>
